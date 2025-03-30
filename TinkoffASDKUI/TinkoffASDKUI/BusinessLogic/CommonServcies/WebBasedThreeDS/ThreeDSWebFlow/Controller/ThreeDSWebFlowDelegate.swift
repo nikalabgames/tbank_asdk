@@ -20,7 +20,7 @@ public protocol ThreeDSWebFlowDelegate: AnyObject, Equatable {
 // MARK: - Equatable
 
 extension ThreeDSWebFlowDelegate {
-    static func == (lhs: any Self, rhs: any Self) -> Bool {
+    static func == (lhs: Self, rhs: Self) -> Bool {
         lhs === rhs
     }
 }
