@@ -1,0 +1,196 @@
+/*
+ *  Localizable.strings
+ *  TinkoffASDKUI
+ *
+ *  Copyright (c) 2020 Tinkoff Bank
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+"TinkoffAcquiring.unknown.response.status" = "Unknown Status";
+"TinkoffAcquiring.unknown.error.status" = "Unknown Error.\nPlease try again later.";
+//
+"TinkoffAcquiring.alert.title.error" = "Error";
+"TinkoffAcquiring.alert.title.cardSuccessAdded" = "Success";
+"TinkoffAcquiring.alert.title.addingCard" = "Adding card";
+"TinkoffAcquiring.alert.message.addingCardCancel" = "The operation was cancelled";
+//
+"TinkoffAcquiring.button.update" = "Update";
+"TinkoffAcquiring.button.cancel" = "Cancel";
+"TinkoffAcquiring.button.close" = "Close";
+"TinkoffAcquiring.button.ok" = "OK";
+"TinkoffAcquiring.button.payByCard" = "Pay by card";
+"TinkoffAcquiring.button.payBy" = "Pay by ";
+"TinkoffAcquiring.button.qrcode" = "QR-code";
+"TinkoffAcquiring.button.addCard" = "Add Card";
+"TinkoffAcquiring.button.confirm" = "Confirm";
+"TinkoffAcquiring.button.delete" = "Delete";
+//
+"TinkoffAcquiring.text.status.waitingInitPayment" = "Waiting payment initializer";
+"TinkoffAcquiring.text.status.waitingPayment" = "Waiting for payment receipt";
+"TinkoffAcquiring.text.status.cardListEmpty" = "Card List Empty";
+"TinkoffAcquiring.text.status.loading" = "Loading";
+"TinkoffAcquiring.text.status.selectingPaymentSource" = "Selecting a payment source";
+"TinkoffAcquiring.text.status.error.email" = "Incorrect email";
+"TinkoffAcquiring.text.status.error.emailEmpty" = "Please enter email";
+"TinkoffAcquiring.text.addcard" = "Add card";
+"TinkoffAcquiring.text.addNewCard" = "Add new card";
+"TinkoffAcquiring.text.loopConfirmation" = "To confirm the operation, we debited and refunded a small amount (up to 1,99 rubles)\nPlease specify it.";
+"TinkoffAcquiring.text.or" = "or";
+//
+"TinkoffAcquiring.hint.loopAmount" = "all amount, down to the penny";
+//
+"TinkoffAcquiring.error.loopAmount" = "please, enter the amount";
+//
+"TinkoffAcquiring.placeholder.cardNumber" = "Card number";
+"TinkoffAcquiring.placeholder.sendReceiptToEmail" = "Send receipt to email";
+"TinkoffAcquiring.placeholder.loopAmount" = "for example 0,89";
+//
+"TinkoffAcquiring.view.title.pay" = "Payment";
+"TinkoffAcquiring.view.title.savedCards" = "Saved cards";
+"TinkoffAcquiring.view.title.payQRCode" = "Payment by QR-code";
+"TinkoffAcquiring.view.title.confimration" = "Confirmation";
+
+// Acquiring
+"Acquiring.SBP.ScreenTitle" = "Choose bank";
+"Acquiring.SBPBanks.ButtonClose" = "Close";
+"Acquiring.SBPBanks.AnotherBank" = "Another bank";
+"Acquiring.SBPAllBanks.SearchPlaceholder" = "Name";
+"Acquiring.PaymentCard.ChangeButton" = "Change card";
+
+// CommonAlert
+"CommonAlert.SBPNoBank.Title" = "Unable to\U00A0find this bank’s app";
+"CommonAlert.SBPNoBank.Description" = "Install it or\U00A0choose another bank";
+"CommonAlert.Button" = "OK";
+
+// Tinkoff Pay
+"TP.LoadingStatus.Title" = "Payment confirmation awaiting";
+
+// 3ds app-based
+"TinkoffAcquiring.threeds.cancelAuth" = "Cancel";
+"TinkoffAcquiring.threeds.acceptAuth" = "Confirmation";
+"TinkoffAcquiring.threeds.error.invalidPaymentSystem" = "Payment system is not supported";
+"TinkoffAcquiring.threeds.error.updatingCertsError" = "Unable to update certificates";
+"TinkoffAcquiring.threeds.error.timeout" = "3DS operation timed out";
+
+// CardList
+"Acquiring.CardList.ScreenTitle" = "Your Cards";
+"Acquiring.CardList.ButtonChange" = "Edit";
+"Acquiring.CardList.ButtonDone" = "Done";
+"CardList.alert.title.deleteCard" = "Delete this card";
+"CardList.alert.message.deleteCard" = "Are you sure you want to delete the card %@?";
+"CardList.alert.action.cancel" = "Cancel";
+"CardList.alert.action.delete" = "Delete";
+"CardList.status.noCards" = "You don't have any saved cards";
+"CardList.button.addNewCard" = "Add new card";
+
+// CardList for Change Card Flow
+"CardList.screen.title.paymentByCard" = "Payment by card";
+"CardList.button.anotherCard" = "Another card";
+
+// AcquiringPayment
+"AcquiringPayment.button.chooseCard" = "Choose another card";
+
+// CardField
+"Acquiring.CardField.PanTitle" = "Number";
+"Acquiring.CardField.TermTitle" = "Valid through";
+"Acquiring.CardField.TermPlaceholder" = "07/30";
+"Acquiring.CardField.CVVTitle" = "CVC";
+"Acquiring.CardField.CVVPlaceholder" = "CVC";
+
+// Common
+"Acquiring.Common.SberCardTitle" = "SberBank";
+"Acquiring.Common.TcsCardTitle" = "T-Bank";
+"Acquiring.Common.VtbCardTitle" = "Bank VTB";
+"Acquiring.Common.AlfaCardTitle" = "Alfa Bank";
+"Acquiring.Common.GazpromCardTitle" = "Gazprom Bank";
+"Acquiring.Common.RaiffeisenCardTitle" = "Raiffeisen Bank";
+
+// Alerts
+"CommonAlert.DeleteCard.Title" = "Unable to\U00A0remove the\U00A0card";
+"CommonAlert.AddCard.Title" = "Card is\U00A0already added";
+"CommonAlert.SomeProblem.Title" = "We have a problem, working on it already";
+"CommonAlert.SomeProblem.Description" = "Try again in\U00A0a\U00A0couple of\U00A0minutes";
+
+// CardList
+"Acquiring.CardList.AddCard" = "Add new";
+"Acquiring.CardList.DeleteSnackBar" = "Deleting card %@";
+"Acquiring.CardList.AddSnackBar" = "Card %@ added";
+"Snackbar.AddCard.alreadyHasSuchCard" = "Already added such card";
+"Snackbar.AddCard.problem" = "Failed to add card %@Try again after few minutes";
+
+// Add New Card
+"Acquiring.AddNewCard.ScreenTitle" = "New Card";
+"Acquiring.AddNewCard.ButtonClose" = "Close";
+"Acquiring.AddNewCard.AddButton" = "Add";
+
+// Payment New Card
+"Acquiring.PaymentNewCard.ScreenTitle" = "Pay by card";
+"Acquiring.PaymentNewCard.ButtonClose" = "Close";
+"Acquiring.PaymentNewCard.PaymentButton" = "Pay";
+
+// Email Field
+"Acquiring.EmailField.Title" = "Email";
+"Acquiring.EmailField.SwitchButton" = "Get receipt";
+
+// Заглушки
+"CommonStub.SomeProblem.Title" = "We\U00A0have a\U00A0problem, working on\U00A0it\U00A0already";
+"CommonStub.NoNetwork.Title" = "Loading failed";
+"CommonStub.NoNetwork.TryLater" = "Check the network connection and try again";
+"CommonStub.SomeProblem.Description" = "Try again in\U00A0a\U00A0couple of\U00A0minutes";
+"CommonStub.NoNetwork.Description" = "Check internet connection and\U00A0try\U00A0again";
+"CommonStub.NoCards.Description" = "Your cards will\U00A0be\U00A0shown here";
+"CommonStub.NoCardsToPay.Description" = "No cards to pay";
+"CommonStub.SomeProblem.Button" = "Got it";
+"CommonStub.NoNetwork.Button" = "Reload";
+"CommonStub.NoCards.Button" = "Add";
+"CommonStub.NoCardsToPay.Button" = "Pay with a new";
+
+// CommonSheet
+"CommonSheet.Processing.Title" = "Processing payment";
+"CommonSheet.Processing.Description" = "This will take some time";
+"CommonSheet.Paid.Title" = "Payment complete";
+"CommonSheet.Paid.PrimaryButton" = "Got it";
+"CommonSheet.PaymentWaiting.Title" = "Waiting for\U00A0payment in\U00A0the bank’s app";
+"CommonSheet.PaymentWaiting.PrimaryButton" = "Pay";
+"CommonSheet.PaymentWaiting.SecondaryButton" = "Close";
+"CommonSheet.TimeoutFailed.Title" = "Payment time ran\U00A0out";
+"CommonSheet.TimeoutFailed.Description" = "Try paying again";
+"CommonSheet.TimeoutFailed.SecondaryButton" = "Close";
+"CommonSheet.PaymentFailed.Title" = "Payment failed";
+"CommonSheet.PaymentFailed.Description" = "Try another method";
+"CommonSheet.PaymentFailed.PrimaryButton" = "Choose another method";
+"CommonSheet.PaymentFailed.TryAgain" = "Try again or use another pay method";
+"CommonSheet.FailedPayment.Title" = "Payment error";
+"CommonSheet.FailedPayment.PrimaryButton" = "Ok";
+"CommonSheet.PaymentForm.ToPayTitle" = "Checkout";
+"CommonSheet.PaymentForm.ContactStore" = "Contact the store for details";
+"CommonSheet.PaymentForm.ByCardTitle" = "Card";
+"CommonSheet.PaymentForm.ByCardPrimaryButton" = "Pay by\U00A0card";
+"CommonSheet.PaymentForm.AnotherMethodTitle" = "Another method";
+"CommonSheet.PaymentForm.SBPTitle" = "FPS";
+"CommonSheet.PaymentForm.SBPDescription" = "In any bank’s app";
+"CommonSheet.PaymentForm.SBPPrimaryButton" = "Pay";
+"CommonSheet.PaymentForm.TinkoffPayTitle" = "T-Pay";
+"CommonSheet.PaymentForm.TinkoffPayDescription" = "In T-Bank's app";
+"CommonSheet.PaymentForm.TinkoffPayPrimaryButton" = "Pay with";
+"CommonSheet.PaymentForm.TinkoffPay.FailedPayment.PrimaryButton" = "Choose another payment method";
+"CommonSheet.PaymentForm.TinkoffPay.TimedOut.PrimaryButton" = "Try again";
+"CommonSheet.TinkoffPay.Waiting.Title" = "Waiting for payment in the bank application";
+"CommonSheet.TinkoffPay.Waiting.SecondaryButton" = "Cancel";
+"CommonSheet.TinkoffPay.Paid.Title" = "Paid";
+"CommonSheet.TinkoffPay.Paid.PrimaryButton" = "Ok";
+"CommonSheet.TinkoffPay.TimedOut.Title" = "Payment time has expired";
+"CommonSheet.TinkoffPay.TimedOut.PrimaryButton" = "Ok";
+
+// General Actions
+"action.repeat" = "Repeat";

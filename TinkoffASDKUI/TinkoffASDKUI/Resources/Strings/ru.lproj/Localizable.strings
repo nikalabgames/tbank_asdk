@@ -1,0 +1,198 @@
+/*
+ *  Localizable.strings
+ *  TinkoffASDKUI
+ *
+ *  Copyright (c) 2020 Tinkoff Bank
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
+"TinkoffAcquiring.unknown.response.status" = "Неизвестный статус платежа";
+"TinkoffAcquiring.unknown.error.status" = "Неизвесная ошибка.\nПопробуйте поворить операцию.";
+//
+"TinkoffAcquiring.alert.title.error" = "Ошибка";
+"TinkoffAcquiring.alert.title.cardSuccessAdded" = "Карта добавлена";
+"TinkoffAcquiring.alert.title.addingCard" = "Добавление карты";
+"TinkoffAcquiring.alert.message.addingCardCancel" = "Операция отменена";
+//
+"TinkoffAcquiring.button.update" = "Обновить";
+"TinkoffAcquiring.button.cancel" = "Отмена";
+"TinkoffAcquiring.button.close" = "Закрыть";
+"TinkoffAcquiring.button.ok" = "Ok";
+"TinkoffAcquiring.button.payByCard" = "Оплатить по карте";
+"TinkoffAcquiring.button.payBy" = "Оплатить через ";
+"TinkoffAcquiring.button.qrcode" = "QR-код";
+"TinkoffAcquiring.button.addCard" = "Добавить";
+"TinkoffAcquiring.button.confirm" = "Подтвердить";
+"TinkoffAcquiring.button.delete" = "Удалить";
+//
+"TinkoffAcquiring.text.status.waitingInitPayment" = "Инициалихация платежа";
+"TinkoffAcquiring.text.status.waitingPayment" = "Ожидание оплаты";
+"TinkoffAcquiring.text.status.cardListEmpty" = "Сохраненных карт нет";
+"TinkoffAcquiring.text.status.loading" = "Загрузка ...";
+"TinkoffAcquiring.text.status.selectingPaymentSource" = "Выбор источника оплаты";
+"TinkoffAcquiring.text.status.error.email" = "Неверный формат электронной почты";
+"TinkoffAcquiring.text.status.error.emailEmpty" = "Введите email";
+"TinkoffAcquiring.text.addcard" = "Добавить карту";
+"TinkoffAcquiring.text.addNewCard" = "Добавить новую карту";
+"TinkoffAcquiring.text.loopConfirmation" = "Для подтверждения операции мы списали и вернули небольшую сумму (до 1,99 руб.)\nПожалуйста, укажите ее с точностью до копеек.";
+"TinkoffAcquiring.text.or" = "или";
+//
+"TinkoffAcquiring.hint.loopAmount" = "сумма с точностью до копеек";
+//
+"TinkoffAcquiring.error.loopAmount" = "укажите сумму с точностью до копеек";
+//
+"TinkoffAcquiring.placeholder.cardNumber" = "Номер карты";
+"TinkoffAcquiring.placeholder.sendReceiptToEmail" = "Отправить квитанцию по адресу";
+"TinkoffAcquiring.placeholder.loopAmount" = "Например 0,89";
+//
+"TinkoffAcquiring.view.title.pay" = "Оплата";
+"TinkoffAcquiring.view.title.savedCards" = "Сохраненные карты";
+"TinkoffAcquiring.view.title.payQRCode" = "Оплата по QR-коду";
+"TinkoffAcquiring.view.title.confimration" = "Подтверждение";
+
+// Acquiring
+"Acquiring.SBP.ScreenTitle" = "Выбор банка";
+"Acquiring.SBPBanks.ButtonClose" = "Закрыть";
+"Acquiring.SBPBanks.AnotherBank" = "Другой банк";
+"Acquiring.SBPAllBanks.SearchPlaceholder" = "Название";
+"Acquiring.PaymentCard.ChangeButton" = "Сменить карту";
+
+// CommonAlert
+"CommonAlert.SBPNoBank.Title" = "Не получилось найти приложение этого банка";
+"CommonAlert.SBPNoBank.Description" = "Установите его или выберите другой банк";
+"CommonAlert.Button" = "Понятно";
+
+// Tinkoff Pay
+"TP.LoadingStatus.Title" = "Ожидаем подтверждения платежа";
+
+// 3ds app-based
+"TinkoffAcquiring.threeds.cancelAuth" = "Отменить";
+"TinkoffAcquiring.threeds.acceptAuth" = "Подтверждение";
+"TinkoffAcquiring.threeds.error.invalidPaymentSystem" = "Платежная система не поддерживается";
+"TinkoffAcquiring.threeds.error.updatingCertsError" = "Не удалось обновить сертификаты";
+"TinkoffAcquiring.threeds.error.timeout" = "Превышено маскимальное время прохождения 3DS";
+
+// CardList
+"Acquiring.CardList.ScreenTitle" = "Ваши карты";
+"Acquiring.CardList.ButtonChange" = "Изменить";
+"Acquiring.CardList.ButtonDone" = "Готово";
+"CardList.alert.title.deleteCard" = "Удаление карты";
+"CardList.alert.message.deleteCard" = "Вы уверены, что хотите удалить карту %@?";
+"CardList.alert.action.cancel" = "Отмена";
+"CardList.alert.action.delete" = "Удалить";
+"CardList.status.noCards" = "У вас нет сохраненных карт";
+"CardList.button.addNewCard" = "Добавить новую карту";
+
+// CardList for Change Card Flow
+"CardList.screen.title.paymentByCard" = "Оплата картой";
+"CardList.button.anotherCard" = "Другой картой";
+
+// AcquiringPayment
+"AcquiringPayment.button.chooseCard" = "Выбрать другую карту";
+
+// CardField
+"Acquiring.CardField.PanTitle" = "Номер";
+"Acquiring.CardField.TermTitle" = "Срок";
+"Acquiring.CardField.TermPlaceholder" = "07/30";
+"Acquiring.CardField.CVVTitle" = "CVC";
+"Acquiring.CardField.CVVPlaceholder" = "123";
+
+// Common
+"Acquiring.Common.SberCardTitle" = "СберБанк";
+"Acquiring.Common.TcsCardTitle" = "Т-Банк";
+"Acquiring.Common.VtbCardTitle" = "Банк ВТБ";
+"Acquiring.Common.AlfaCardTitle" = "Альфа Банк";
+"Acquiring.Common.GazpromCardTitle" = "Газпром Банк";
+"Acquiring.Common.RaiffeisenCardTitle" = "Райффайзен Банк";
+
+// Alerts
+"CommonAlert.DeleteCard.Title" = "Не получилось удалить карту";
+"CommonAlert.Button" = "Понятно";
+"CommonAlert.AddCard.Title" = "Карта уже добавлена";
+"CommonAlert.SomeProblem.Title" = "У нас проблема, мы уже решаем ее";
+"CommonAlert.SomeProblem.Description" = "Попробуйте снова через пару минут";
+
+// CardList
+"Acquiring.CardList.AddCard" = "Добавить новую";
+"Acquiring.CardList.DeleteSnackBar" = "Удаляем карту %@";
+"Acquiring.CardList.AddSnackBar" = "Карта %@ добавлена";
+"Snackbar.AddCard.alreadyHasSuchCard" = "Такая карта уже привязана";
+"Snackbar.AddCard.problem" = "Не получилось добавить карту %@Попробуйте снова через пару минут";
+
+// Add New Card
+"Acquiring.AddNewCard.ScreenTitle" = "Новая карта";
+"Acquiring.AddNewCard.ButtonClose" = "Закрыть";
+"Acquiring.AddNewCard.AddButton" = "Добавить";
+
+// Payment New Card
+"Acquiring.PaymentNewCard.ScreenTitle" = "Оплата картой";
+"Acquiring.PaymentNewCard.ButtonClose" = "Закрыть";
+"Acquiring.PaymentNewCard.PaymentButton" = "Оплатить";
+
+// Email Field
+"Acquiring.EmailField.Title" = "Электронная почта";
+"Acquiring.EmailField.SwitchButton" = "Получить квитанцию";
+
+// Заглушки
+"CommonStub.SomeProblem.Title" = "У нас проблема, мы уже ее решаем";
+"CommonStub.NoNetwork.Title" = "Не загрузилось";
+"CommonStub.NoNetwork.TryLater" = "Проверьте доступ к интернету и попробуйте еще раз";
+"CommonStub.SomeProblem.Description" = "Попробуйте снова через пару минут";
+"CommonStub.NoNetwork.Description" = "Проверьте доступ к интернету и попробуйте еще раз";
+"CommonStub.NoCards.Description" = "Здесь будут ваши карты";
+"CommonStub.NoCardsToPay.Description" = "Нет карт для оплаты";
+"CommonStub.SomeProblem.Button" = "Понятно";
+"CommonStub.NoNetwork.Button" = "Обновить";
+"CommonStub.NoCards.Button" = "Добавить";
+"CommonStub.NoCardsToPay.Button" = "Оплатить новой";
+
+// CommonSheet
+"CommonSheet.Processing.Title" = "Обрабатываем платеж";
+"CommonSheet.Processing.Description" = "Это займет некоторое время";
+"CommonSheet.Paid.Title" = "Оплачено";
+"CommonSheet.Paid.PrimaryButton" = "Понятно";
+"CommonSheet.PaymentWaiting.Title" = "Ждем оплату в приложении банка";
+"CommonSheet.PaymentWaiting.PrimaryButton" = "Оплатить";
+"CommonSheet.PaymentWaiting.SecondaryButton" = "Закрыть";
+"CommonSheet.TimeoutFailed.Title" = "Время оплаты истекло";
+"CommonSheet.TimeoutFailed.Description" = "Попробуйте оплатить снова";
+"CommonSheet.TimeoutFailed.SecondaryButton" = "Закрыть";
+"CommonSheet.PaymentFailed.Title" = "Ошибка при оплате";
+"CommonSheet.PaymentFailed.Description" = "Попробуйте другой способ оплаты";
+"CommonSheet.PaymentFailed.PrimaryButton" = "Выбрать другой способ";
+"CommonSheet.PaymentFailed.TryAgain" = "Попробуйте еще раз или оплатите другим способом";
+"CommonSheet.FailedPayment.Title" = "Не получилось оплатить";
+"CommonSheet.FailedPayment.PrimaryButton" = "Понятно";
+"CommonSheet.PaymentForm.ToPayTitle" = "К оплате";
+"CommonSheet.PaymentForm.ContactStore" = "Чтобы узнать детали, свяжитесь с магазином";
+"CommonSheet.PaymentForm.ByCardTitle" = "Картой";
+"CommonSheet.PaymentForm.ByCardPrimaryButton" = "Оплатить картой";
+"CommonSheet.PaymentForm.AnotherMethodTitle" = "Оплатить другим способом";
+"CommonSheet.PaymentForm.SBPTitle" = "СБП";
+"CommonSheet.PaymentForm.SBPDescription" = "В приложении любого банка";
+"CommonSheet.PaymentForm.SBPPrimaryButton" = "Оплатить";
+"CommonSheet.PaymentForm.TinkoffPayTitle" = "T-Pay";
+"CommonSheet.PaymentForm.TinkoffPayDescription" = "В приложении T-Банка";
+"CommonSheet.PaymentForm.TinkoffPayPrimaryButton" = "Оплатить с";
+"CommonSheet.PaymentForm.TinkoffPay.FailedPayment.PrimaryButton" = "Выбрать другой способ оплаты";
+"CommonSheet.PaymentForm.TinkoffPay.TimedOut.PrimaryButton" = "Попробовать снова";
+"CommonSheet.TinkoffPay.Waiting.Title" = "Ожидаем оплату в приложении банка";
+"CommonSheet.TinkoffPay.Waiting.SecondaryButton" = "Отмена";
+"CommonSheet.TinkoffPay.Paid.Title" = "Оплачено";
+"CommonSheet.TinkoffPay.Paid.PrimaryButton" = "Понятно";
+"CommonSheet.TinkoffPay.TimedOut.Title" = "Время оплаты истекло";
+"CommonSheet.TinkoffPay.TimedOut.PrimaryButton" = "Понятно";
+
+// General Actions
+"action.repeat" = "Повторить";

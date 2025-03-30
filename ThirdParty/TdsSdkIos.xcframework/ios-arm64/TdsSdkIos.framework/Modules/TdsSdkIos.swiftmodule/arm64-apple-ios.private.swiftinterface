@@ -1,0 +1,437 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios12.3 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Osize -module-name TdsSdkIos
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AdSupport
+import CommonCrypto
+import Compression
+import CoreLocation
+import Foundation
+import LocalAuthentication
+import Security
+import Swift
+@_exported import TdsSdkIos
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class AuthenticationRequestParameters {
+  public init(deviceData: String, sdkTransId: String, sdkAppID: String, sdkReferenceNum: String, ephemeralPublic: String, messageVersion: String)
+  public func getDeviceData() -> String
+  public func getSDKTransactionID() -> String
+  public func getSDKAppID() -> String
+  public func getSDKReferenceNumber() -> String
+  public func getSDKEphemeralPublicKey() -> String
+  public func getMessageVersion() -> String
+  @objc deinit
+}
+public class Warning {
+  public init(severity: Severity, id: String, message: String)
+  public func getSeverity() -> Severity
+  public func getId() -> String
+  public func getMessage() -> String
+  @objc deinit
+}
+public class ProtocolErrorEvent {
+  public init(sdkTransactionID: String, errorMessage: ErrorMessage)
+  public func getSdkTransactionID() -> String
+  public func getErrorMessage() -> ErrorMessage
+  @objc deinit
+}
+public class ToolbarCustomization : Customization {
+  override public init()
+  public var isHideShadowImage: Bool
+  public func setBackgroundColor(_ backgroundColor: UIColor)
+  public func getBackgroundColor() -> UIColor?
+  public func setHeaderText(_ headerText: String)
+  public func getHeaderText() -> String
+  public func setButtonText(_ buttonText: String)
+  public func getButtonText() -> String
+  @objc deinit
+}
+public protocol SpinnerProducerProtocol {
+  func getSpinner(_ hudedController: UIViewController) -> ExternalProgressDialog
+}
+public enum CustTextViewType {
+  case CHALLENGE_INFO_TEXT
+  case WHY_INFO_TEXT
+  case EXT_INFO_TEXT
+  case WHITELISTING_TEXT
+  public static func == (a: TdsSdkIos.CustTextViewType, b: TdsSdkIos.CustTextViewType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class CustTextCustomization : Customization, NSCopying {
+  override public init()
+  public init(textColor: UIColor?, backgroundColor: UIColor?, textFontName: String?, textFontSize: Int?, textFontWeight: CGFloat? = 200)
+  public func setBackgroundColor(_ color: UIColor)
+  public func getBackgroundColor() -> UIColor?
+  public func setCustomText(fromString: String, toString: String)
+  public func getCustomText(fromString: String) -> String?
+  @objc public func copy(with zone: NSZone? = nil) -> Any
+  @objc deinit
+}
+public struct UiConstraints {
+  public init(leading: CGFloat? = nil, trailing: CGFloat? = nil, top: CGFloat? = nil, bottom: CGFloat? = nil, height: CGFloat? = nil, width: CGFloat? = nil)
+}
+public enum UiObject {
+  case bankLogo
+  case psLogo
+  case challengeInfoHeader
+  case challengeInfoLabel
+  case challengeInfoText
+  case whitelistingInfo
+  case whyInfoButton
+  case whyInfo
+  case extInfoButton
+  case extInfo
+  case warningImage
+  case otp
+  case submitButton
+  case resendButton
+  case continueButton
+  case tableView
+  case nextButton
+  public static func == (a: TdsSdkIos.UiObject, b: TdsSdkIos.UiObject) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class LabelCustomization : Customization {
+  override public init()
+  public func setHeadingTextColor(_ headingTextColor: UIColor)
+  public func getHeadingTextColor() -> UIColor?
+  public func setHeadingTextFontName(_ headingTextFontName: String)
+  public func getHeadingTextFontName() -> String
+  public func setHeadingTextFontSize(_ headingTextFontSize: Int)
+  public func getHeadingTextFontSize() -> Int
+  public func setHeadingTextFontWeight(_ headingTextFontWeight: CGFloat)
+  public func getHeadingTextFontWeight() -> CGFloat
+  @objc deinit
+}
+public protocol ITdsLogger {
+  func log(_ message: String, file: String, function: String, line: UInt)
+}
+public class UiCustomization {
+  public init()
+  public func setButtonCustomization(buttonCustomization: ButtonCustomization, buttonType: ButtonType)
+  public func getButtonCustomization(_ buttonType: ButtonType) -> ButtonCustomization?
+  public func setToolbarCusomization(_ toolbarCusomization: ToolbarCustomization)
+  public func getToolbarCusomization() -> ToolbarCustomization?
+  public func setLabelCustomization(_ labelCustomization: LabelCustomization)
+  public func getLabelCustomization() -> LabelCustomization?
+  public func setTextBoxCustomization(_ textBoxCustomization: TextBoxCustomization)
+  public func getTextBoxCustomization() -> TextBoxCustomization?
+  public func setCustImageCustomization(imageCustomization: CustImageCustomization, imageType: CustImageType)
+  public func getCustImageCustomization(_ imageType: CustImageType) -> CustImageCustomization?
+  public func setCustTextCustomization(textCustomization: CustTextCustomization, textType: CustTextViewType)
+  public func getCustTextCustomization(_ textType: CustTextViewType) -> CustTextCustomization?
+  public func setCustWarning(_ custWarining: CustWarning)
+  public func getCustWarning() -> CustWarning?
+  public var showErrorDataEntry: Bool {
+    get
+    set
+  }
+  @objc deinit
+}
+public class ThreeDS2Service {
+  public init()
+  public func setCertProducer(_ transactionCertsProducer: TransactionCertsProducerProtocol)
+  public func setSpinnerProducer(_ extSpinnerProducer: SpinnerProducerProtocol)
+  public func initialize(configParameters: ConfigParameters, uiCustomization: UiCustomization?, logger: ITdsLogger? = nil, locale: Locale) throws
+  public func initialize(configParameters: ConfigParameters, uiCustomization: UiCustomization?, uiCustomizationConstraints: UiCustomizationConstraints?, logger: ITdsLogger? = nil, locale: Locale) throws
+  public func cleanup()
+  public func getSDKVersion() throws -> String
+  public func getWarnings() throws -> Array<Warning>
+  public func createTransaction(directoryServerID: String, messageVersion: String) throws -> Transaction
+  @objc deinit
+}
+public class RuntimeErrorEvent {
+  public init(errorCode: String, errorMessage: String)
+  public func getErrorCode() -> String
+  public func getErrorMessage() -> String
+  @objc deinit
+}
+public enum ButtonType {
+  case VERIFY
+  case CONTINUE
+  case NEXT
+  case CANCEL
+  case RESEND
+  case SUBMIT
+  case CUST_WHY_INFO
+  case CUST_EXT_INFO
+  public static func == (a: TdsSdkIos.ButtonType, b: TdsSdkIos.ButtonType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol TransactionCertsProducerProtocol {
+  func getCerts(_ directoryServerID: String) throws -> TransactionCerts
+}
+public struct TransactionCerts {
+  public let deviceInfoEncCertDerBytes: Data
+  public let dsRootCADerBytes: Data
+  public let algorithm: CertAlgorithm
+  public var directoryServerIDAkaRID: String?
+  public init(deviceInfoEncCertDerBytes: Data, dsRootCADerBytes: Data, algorithm: CertAlgorithm)
+  public init(deviceInfoEncCertDerBytes: Data, dsRootCADerBytes: Data, algorithm: CertAlgorithm, directoryServerIDAkaRID: String)
+}
+public class TextBoxCustomization : Customization {
+  override public init()
+  public func setBorderWidth(_ borderWidth: Int)
+  public func getBorderWidth() -> Int
+  public func setBorderColor(_ borderColor: UIColor)
+  public func getBorderColor() -> UIColor?
+  public func setCornerRadius(_ cornerRadius: Int)
+  public func getCornerRadius() -> Int
+  public func setCustBackgroundColor(_ backgroundColor: UIColor)
+  public func getCustBackgroundColor() -> UIColor?
+  public func setCustCursorColor(_ cursorColor: UIColor)
+  public func getCustCursorColor() -> UIColor?
+  public func setErrorColor(_ errorColor: UIColor)
+  public func getErrorColor() -> UIColor?
+  @objc deinit
+}
+public protocol ChallengeStatusReceiver {
+  func completed(_ completionEvent: CompletionEvent)
+  func cancelled()
+  func timedout()
+  func protocolError(_ protocolErrorEvent: ProtocolErrorEvent)
+  func runtimeError(_ runtimeErrorEvent: RuntimeErrorEvent)
+}
+public class ButtonCustomization : Customization {
+  override public init()
+  public func setBackgroundColor(_ backgroundColor: UIColor)
+  public func getBackgroundColor() -> UIColor?
+  public func setCornerRadius(_ cornerRadius: Int)
+  public func getCornerRadius() -> Int
+  public func setCustBorderWidth(_ borderWidth: Int)
+  public func getCustBorderWidth() -> Int
+  public func setCustHighlitedColor(_ highlitedColor: UIColor)
+  public func getCustHighlitedColor() -> UIColor?
+  public func setCustTextHighlitedColor(_ highlitedColor: UIColor)
+  public func getCustTextHighlitedColor() -> UIColor?
+  public func setRightImageInset(_ rightInset: CGFloat)
+  public func setLeftImageInset(_ lefInset: CGFloat)
+  public func getRightImageInset() -> CGFloat
+  public func getLeftImageInset() -> CGFloat
+  public func setLeftTitleInset(_ leftInset: CGFloat)
+  public func getLeftTitleInset() -> CGFloat
+  @objc deinit
+}
+public struct SevurityWarning {
+}
+public enum Severity {
+  case LOW
+  case MEDIUM
+  case HIGH
+  public static func == (a: TdsSdkIos.Severity, b: TdsSdkIos.Severity) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ProgressView : UIActivityIndicatorView, ProgressDialog {
+  @_Concurrency.MainActor(unsafe) public init(_ controller: UIViewController?, alpha: Double)
+  @_Concurrency.MainActor(unsafe) public func start()
+  @_Concurrency.MainActor(unsafe) public func stop()
+  @objc deinit
+}
+public protocol ProgressDialog {
+  func start()
+  func stop()
+}
+public protocol ExternalProgressDialog : TdsSdkIos.ProgressDialog {
+  var hudedController: UIViewController { get set }
+  func internalStartAnimating()
+  func internalStopAnimating()
+}
+extension ExternalProgressDialog where Self : UIKit.UIView {
+  public func start()
+  public func stop()
+}
+public struct DevInfoCert {
+  public init(certFilename: String, rootCACertFilename: String, directoryServerIDAkaRID: String, certAlgorithm: CertAlgorithm, bundle: Bundle? = nil)
+}
+public enum CertAlgorithm {
+  case RSA
+  case EC
+  public static func == (a: TdsSdkIos.CertAlgorithm, b: TdsSdkIos.CertAlgorithm) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Transaction {
+  public func getAuthenticationRequestParameters() throws -> AuthenticationRequestParameters
+  public func doChallenge(challengeParameters: ChallengeParameters, challengeStatusReceiver: ChallengeStatusReceiver, timeout: Int)
+  public func nibPresentWeb(html: String)
+  public func nibPresentRoot(CResData: Data)
+  public func getProgressView() -> ProgressDialog
+  public func close()
+  @objc deinit
+}
+public class ChallengeParameters {
+  public init()
+  public func set3DSServerTransactionId(_ tdsServerTransactionId: String)
+  public func get3DSServerTransactionId() throws -> String
+  public func setAcsTransactionId(_ acsTransactionId: String)
+  public func getAcsTransactionId() throws -> String
+  public func setAcsRefNumber(_ acsRefNumber: String)
+  public func getAcsRefNumber() throws -> String
+  public func setAcsSignedContent(_ acsSignedContent: String)
+  public func getAcsSignedContent() throws -> String
+  public func setTreeDSRequestorAppURL(_ tdsRequestorAppURL: String)
+  public func getTreeDSRequestorAppURL() throws -> String
+  @objc deinit
+}
+public class Customization {
+  public init()
+  public init(textFontName: String?, textColor: UIColor?, textFontSize: Int?, textFontWeight: CGFloat?)
+  public func setTextFontName(_ textFontName: String)
+  public func getTextFontName() -> String
+  public func setTextColor(_ textColor: UIColor)
+  public func getTextColor() -> UIColor?
+  public func setTextFontSize(_ textFontSize: Int)
+  public func getTextFontSize() -> Int?
+  public func setTextFontWeight(_ textFontWeight: CGFloat)
+  public func getTextFontWeight() -> CGFloat?
+  public func setTextFont(name: String?, size: Int?, weight: CGFloat? = 200)
+  @objc deinit
+}
+public class CustImageCustomization {
+  public init(bundle: Bundle, name: String, tintColor: UIColor? = nil)
+  @objc deinit
+}
+public enum ParameterUnavailableReason : String {
+  case MARKET_OR_REGIONAL_RESTRICTION
+  case PLATFORM_NOT_SUPPORTED
+  case COLLECTION_NOT_POSSIBLE_WITHOUT_USER_PERMISSION
+  case VALUE_IS_EMPTY_OR_BLANK
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class CustWarning {
+  public init()
+  convenience public init(isShowIndicator: Bool = false, isOwnFiled: Bool = false, textColor: UIColor?, backgroundColor: UIColor? = UIColor.clear, topConstraint: CGFloat? = 5)
+  public func setTextFont(name: String?, size: Int?, weight: CGFloat? = 200)
+  public func setShowIndicator(_ isShowIndicator: Bool)
+  public func getShowIndicator() -> Bool
+  public func setTextColor(_ textColor: UIColor)
+  public func getTextColor() -> UIColor?
+  public func setBackgroundColor(_ backgroundColor: UIColor)
+  public func getBackgroundColor() -> UIColor?
+  @objc deinit
+}
+public class ErrorMessage {
+  public init(errorCode: String, errorDescription: String, errorDetails: String, transactionID: String)
+  public func getErrorCode() -> String
+  public func getErrorDescription() -> String
+  public func getErrorDetails() -> String
+  public func getTransactionID() -> String
+  @objc deinit
+}
+public class UiCustomizationConstraints {
+  public init()
+  public func setConstraints(to object: UiObject, _ constraints: UiConstraints)
+  public func getConstraints(to object: UiObject) -> UiConstraints
+  @objc deinit
+}
+public class CompletionEvent {
+  public init(sdkTransactionID: String, transactionStatus: String)
+  public func getSdkTransactionID() -> String
+  public func getTransactionStatus() -> String
+  @objc deinit
+}
+public enum DeviceInfoParameter : String {
+  case PLATFORM
+  case DEVICE_MODEL
+  case OS_NAME
+  case OS_VERSION
+  case LOCALE
+  case TIME_ZONE
+  case ADVERTISING_ID
+  case SCREEN_RESOLUTION
+  case DEVICE_NAME
+  case IP_ADDRESS
+  case LATITUDE
+  case LONGITUDE
+  case WTF_PARAM
+  case SDK_APP_ID
+  case SDK_VERSION
+  case IDENTIFIER_FOR_VENDOR
+  case USER_INTERFACE_IDIOM
+  case FONT_FAMILY_NAMES
+  case FONT_NAMES_FOR_FAMILY_NAME
+  case SYSTEM_FONT
+  case LABEL_FONT_SIZE
+  case BUTTON_FONT_SIZE
+  case SMALL_SYSTEM_FONT_SIZE
+  case SYSTEM_FONT_SIZE
+  case SYSTEM_LOCALE
+  case AVAILABLE_LOCALES
+  case PREFERRED_LANGUAGES
+  case DEFAULT_TIME_ZONE
+  case APPS_RECIPT
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SdkError : Error {
+  case InvalidInputException(message: String)
+  case InvalidAcsResponseException(message: String)
+  case httpRequestException(message: String)
+  case SDKAlreadyInitializedException(message: String)
+  case SDKNotInitializedException(message: String)
+  case SDKRuntimeException(message: String)
+}
+public enum CustImageType {
+  case WARNING
+  case ARROW_UP
+  case ARROW_DOWN
+  case CHECKBOX_WHITELISTING_CHECKED
+  case CHECKBOX_WHITELISTING_UNCHECKED
+  public static func == (a: TdsSdkIos.CustImageType, b: TdsSdkIos.CustImageType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class ConfigParameters {
+  final public let devInfoCerts: [String : DevInfoCert]
+  public init()
+  public init(_ devInfoCerts: [String : DevInfoCert])
+  public func addParam(group: String?, paramName: String, paramValue: String?) throws
+  public func getParamValue(group: String?, paramName: String) throws -> String?
+  public func removeParam(group: String?, paramName: String) throws -> String?
+  @objc deinit
+}
+extension TdsSdkIos.CustTextViewType : Swift.Equatable {}
+extension TdsSdkIos.CustTextViewType : Swift.Hashable {}
+extension TdsSdkIos.UiObject : Swift.Equatable {}
+extension TdsSdkIos.UiObject : Swift.Hashable {}
+extension TdsSdkIos.ButtonType : Swift.Equatable {}
+extension TdsSdkIos.ButtonType : Swift.Hashable {}
+extension TdsSdkIos.Severity : Swift.Equatable {}
+extension TdsSdkIos.Severity : Swift.Hashable {}
+extension TdsSdkIos.CertAlgorithm : Swift.Equatable {}
+extension TdsSdkIos.CertAlgorithm : Swift.Hashable {}
+extension TdsSdkIos.ParameterUnavailableReason : Swift.Equatable {}
+extension TdsSdkIos.ParameterUnavailableReason : Swift.Hashable {}
+extension TdsSdkIos.ParameterUnavailableReason : Swift.RawRepresentable {}
+extension TdsSdkIos.DeviceInfoParameter : Swift.Equatable {}
+extension TdsSdkIos.DeviceInfoParameter : Swift.Hashable {}
+extension TdsSdkIos.DeviceInfoParameter : Swift.RawRepresentable {}
+extension TdsSdkIos.CustImageType : Swift.Equatable {}
+extension TdsSdkIos.CustImageType : Swift.Hashable {}
